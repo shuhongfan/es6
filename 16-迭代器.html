@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const xiyou=['唐僧','孙悟空','猪八戒','沙僧']
+    // for (let v of xiyou) {
+    //     console.log(v)
+    // }
+    console.log(xiyou)
+
+    let iterator=xiyou[Symbol.iterator]()
+    console.log(iterator)
+    console.log(iterator.next())
+</script>
+</body>
+</html>

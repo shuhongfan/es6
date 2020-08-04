@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const banji={
+        name:'终极一班',
+        stus:[
+            'xiaoming',
+            'xiaohuang',
+            'xiaotian'
+        ],
+        [Symbol.iterator](){
+            let index=0
+            let that=this
+            return {
+                next(){
+                    if (index<that.stus.length){
+                        const res={value:that.stus[index],done:false}
+                        index++
+                        return res
+                    } else {
+                        return {value:undefined,done:true}
+                    }
+                }
+            }
+        }
+    }
+    for (let v of banji){
+        console.log(v)
+    }
+</script>
+</body>
+</html>

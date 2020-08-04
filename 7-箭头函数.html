@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let fn=function () {
+
+    }
+    let fn1=(a,b)=>{
+        return a+b
+    }
+    var res=fn1(3,4)
+    console.log(res)
+
+    // 1.this是静态的 this始终指向函数声明时所在作用域下的this的值
+    function getName() {
+        console.log(this.name)
+    }
+    let getNum2=()=>{
+        console.log(this.name)
+    }
+    window.name='shf'
+    const school={
+        name:'asds'
+    }
+    getName()
+    getNum2()
+    getName.call(school)
+    getNum2.call(school)
+
+    // 2.不能自以为构造函数实例化对象
+    // let Person=(name,age)=>{
+    //     this.name=name
+    //     this.age=age
+    // }
+    // let me=new Person('xiao',30)
+    // console.log(me)
+
+    // 3.不能使用arguments
+    // let fn3=()=>{
+    //     console.log(arguments)
+    // }
+    // fn3(1,2,3)
+
+    // 4.箭头函数简写
+    // 4.1省略小括号 当形参只有一个的时候
+    let add=n=>{
+        return n+n
+    }
+    console.log(add(9))
+
+    // 4.2省略花括号 当代码体只有一条语句的时候 此时return必须省略
+    // 而且语句的执行结果就是函数的返回值
+    let pow=n=>n*n
+    console.log(pow(8))
+</script>
+</body>
+</html>
