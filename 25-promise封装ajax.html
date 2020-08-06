@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const p=new Promise(((resolve, reject) => {
+        const xhr=new XMLHttpRequest()
+        xhr.open('get','https://api.apiopen.top/getJoke')
+        xhr.onreadystatechange=function () {
+            if (xhr.readyState===4){
+                if (xhr.status>=200&&xhr.status<300){
+                    resolve(JSON.parse(xhr.response))
+                } else {
+                    reject(xhr.status)
+                }
+            }
+        }
+        xhr.send()
+    }))
+
+    p.then(function (val) {
+        console.log(val)
+    },function (err) {
+        console.log(err)
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str='<a href="http://www.baidu.com">百度</a>'
+
+    // 提取url与标签文本
+    const reg=/<a href="(.*)">(.*)<\/a>/
+
+    const result=reg.exec(str)
+
+    console.log(result)
+    console.log(result[1])
+    console.log(result[2])
+
+    const reg1=/<a href="(?<url>.*)">(?<test>.*)<\/a>/
+    const res=reg1.exec(str)
+    console.log(res)
+    console.log(res.groups.url)
+    console.log(res.groups.test)
+</script>
+</body>
+</html>

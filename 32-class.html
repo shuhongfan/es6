@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Phone(brand,price) {
+        this.brand=brand
+        this.price=price
+    }
+    Phone.prototype.call=function () {
+        console.log('我可以打电话')
+    }
+
+    let Huawei=new Phone('华为',5999)
+    Huawei.call()
+    console.log(Huawei)
+
+    class NewPhone{
+        constructor(brand,price) {
+            this.brand=brand
+            this.price=price
+        }
+        call(){
+            console.log('我可以打电话')
+        }
+    }
+    let onePlus=new NewPhone('1+',1999)
+    onePlus.call()
+    console.log(onePlus)
+</script>
+</body>
+</html>

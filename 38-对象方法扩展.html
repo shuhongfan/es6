@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 判断两个值是否完成相等
+    console.log(Object.is(120,120))
+    console.log(Object.is(NaN,NaN))
+    console.log(NaN===NaN)
+
+    // 对象合并
+    const config1={
+        host:'localhost',
+        port:3306,
+        name:'root',
+        pass:'root',
+        test1:'test1'
+    }
+    const config2={
+        host:'http://baoud.com',
+        port:33656,
+        name:'admin',
+        pass:'admin',
+        test2:'test2'
+    }
+    console.log(Object.assign(config1,config2))
+
+    // 设置原型对象
+    const school={
+        name:'shdf'
+    }
+    const citys={
+        xiaoqu:['武汉','上海','北京']
+    }
+    Object.setPrototypeOf(school,citys)
+    console.log(school)
+    console.log(Object.getPrototypeOf(school))
+</script>
+</body>
+</html>

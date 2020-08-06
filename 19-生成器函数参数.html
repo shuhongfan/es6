@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function * gen(arg) {
+        console.log(arg)
+
+        let zero=yield 111
+        console.log(zero)
+
+        let one=yield 222
+        console.log(one)
+
+        let two=yield 333
+        console.log(two)
+
+        let three=yield 444
+        console.log(three)
+    }
+
+    // 执行获取迭代器对象/**/
+    let iterator=gen('AAA')
+    console.log(iterator.next())
+    console.log(iterator.next('BBB'))
+    console.log(iterator.next('CCC'))
+    console.log(iterator.next('DDD'))
+</script>
+</body>
+</html>

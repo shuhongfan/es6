@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const p=new Promise((resolve, reject) => {
+        // resolve('成功的值')
+        reject('失败的值')
+    })
+    async function main() {
+        try {
+            let result=await p
+            console.log(result)
+        } catch (e) {
+            console.log(e)
+        }
+    }
+    main()
+</script>
+</body>
+</html>

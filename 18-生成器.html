@@ -5,6 +5,27 @@
     <title>Title</title>
 </head>
 <body>
+<script>
+    function * gen() {
+        console.log('dssd')
+        yield 'sdasdsa1'
+        console.log(111)
+        yield 'sdasdsa2'
+        console.log(222)
+        yield 'sdasdsa3'
+        console.log(333)
+    }
 
+    let iterator=gen()
+    console.log(iterator)
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+
+    for (let v of gen()){
+        console.log(v)
+    }
+</script>
 </body>
 </html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 异步编程
+    setTimeout(()=>{
+        console.log(111)
+        setTimeout(()=>{
+            console.log(222)
+            setTimeout(()=>{
+                console.log(333)
+            },3000)
+        },2000)
+    },1000)
+</script>
+</body>
+</html>

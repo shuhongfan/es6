@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const school={
+        name:'尚硅谷',
+        cities:['北京','上海','深圳'],
+        xuke:['前端','Java','大数据']
+    }
+    // 获取对象的所有的键
+    console.log(Object.keys(school))
+    // 获取对象所有的值
+    console.log(Object.values(school))
+    // entries
+    console.log(Object.entries(school))
+
+    // 创建map
+    const m=new Map(Object.entries(school))
+    console.log(m)
+    console.log(m.get('cities'))
+
+    // 对象属性的描述对象
+    console.log(Object.getOwnPropertyDescriptors(school))
+
+    const obj=Object.create(null,{
+        name:{
+            value:'尚硅谷',
+            // 是否可写
+            writable:true,
+            // 是否可删除
+            configurable:true,
+            // 是否可以枚举
+            enumerable:true
+        }
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function sendAJAX(url) {
+        return new Promise((resolve, reject) => {
+            const x=new XMLHttpRequest()
+            x.open('get',url)
+            x.send()
+            x.onreadystatechange=function () {
+                if (x.readyState===4){
+                    if (x.status>=200&&x.status<300){
+                        resolve(JSON.parse(x.response))
+                    } else {
+                        reject(x.status)
+                    }
+                }
+            }
+        })
+    }
+    const result=sendAJAX('https://api.apiopen.top/getJoke').then(value => {
+        console.log(value)
+    },reason => {
+        console.log(reason)
+    })
+
+    async function main() {
+        let res=await sendAJAX('https://api.apiopen.top/getJoke')
+        let tianqi=await sendAJAX('https://tianqiapi.com/api?version=v6&appid=56914434&appsecret=mGAbq9ge&city')
+        console.log(res)
+        console.log(tianqi)
+    }
+    main()
+</script>
+</body>
+</html>

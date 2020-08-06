@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // rest参数
+    // function connect({host,port,username,password}) {
+    function connect({host,port,...user}) {
+        console.log(host)
+        console.log(port)
+        // console.log(username)
+        // console.log(password)
+        console.log(user)
+    }
+    connect({
+        host:'127.0.0.1',
+        port:3306,
+        username:'root',
+        password:'root',
+        type:'master'
+    })
+
+    const skillOne={
+        q:'天音波'
+    }
+    const skillTwo={
+        w:'dsfsdfds'
+    }
+    const skillThree={
+        r:'dsfdsdfs'
+    }
+    const aa={...skillOne,...skillTwo,...skillThree}
+    console.log(aa)
+</script>
+</body>
+</html>

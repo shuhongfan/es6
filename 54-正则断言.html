@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str='JS5353654656你知道555啦啦啦'
+
+    // 正向断言
+    const reg=/\d+(?=啦)/
+    const reg2=/(?=么)\d+/
+
+    const res=reg.exec(str)
+    const res2=reg2.exec(str)
+
+    console.log(res)
+    console.log(res2)
+</script>
+</body>
+</html>

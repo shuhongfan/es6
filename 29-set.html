@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let s=new Set()
+    let s2=new Set(['大事','小事','大事'])
+    console.log(s,typeof s)
+    console.log(s2)
+
+    // 元素个数
+    console.log(s2.size)
+    // 添加元素
+    s2.add('喜事儿')
+    // 删除元素
+    s2.delete('大事')
+    // 检测
+    console.log(s2.has('小事'))
+    // 清空
+    // s2.clear()
+    console.log(s2)
+
+    for (let v of s2){
+        console.log(v)
+    }
+</script>
+</body>
+</html>

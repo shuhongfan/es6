@@ -1,0 +1,28 @@
+{
+  "name": "es6",
+  "version": "1.0.0",
+  "description": "",
+  "main": "24-promise读取文件.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuhongfan/es6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shuhongfan/es6/issues"
+  },
+  "homepage": "https://github.com/shuhongfan/es6#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "browserify": "^16.5.2"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}
